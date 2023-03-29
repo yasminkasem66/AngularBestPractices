@@ -44,7 +44,18 @@ I leart one of the best practices
 1-Single responsibilty principle =>create service for every crud operation
 2-symbole naming =>service end with service word , component end with component word 
 3-preferring immutability =>not mutating existing objects in memory but rather creating new object
-4-using small functions 
-5-using strict mode 
+ex instead of=> this.currentUser.classes.push(classId)
+         use => this.currentUser={...this.currentUser,classes:this.currentUser.classes.concat(classId)}
+
+ex instead of=> this.currentUser.classes = this.currentUser.classes.filter(c=>c.id!==id)
+         use => this.currentUser={...this.currentUser,classes:this.currentUser.classes.filter(c=>c.id!==id)}
+
+ex instead of=> user.classes=user.classes; this.currentUser=user   =>  this is not mutating the existing currnt user variable, it's replacing it,it's pointing the currentUSer
+               variable to the  same user object 
+         use => const classes= user.classes; this.currentUser={...user, classes:[...classes]}=>  this is will update currnt user variable to a new object that is populated with all properties from user and this called immutablity , change the refernce to objects to not point to the same refernce( deep clone)
+
+concat is similar to push except it return a new array instead of pushing to an exisisting array
+4-using small functions => not more than 15 line
+5-using strict mode  => in tsconfig file 
 
 
