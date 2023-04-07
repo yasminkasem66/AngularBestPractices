@@ -59,3 +59,11 @@ concat is similar to push except it return a new array instead of pushing to an 
 5-using strict mode  => in tsconfig file 
 
 
+## third  part 
+App Module
+core Module =>shared singletons service, App level component like navbar 
+feature Module
+shared Module => shared component directives and pipes
+
+
+high level encapsulation everything in a module is package together and you only expose what's nesseccary to external modules 
