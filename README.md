@@ -61,9 +61,9 @@ concat is similar to push except it return a new array instead of pushing to an 
 
 ## third  part 
 App Module
-core Module =>shared singletons service, App level component like navbar 
-feature Module
-shared Module => shared component directives and pipes
+core Module =>shared singletons service, App level component like navbar , side bar
+feature Module => 
+shared Module => shared component directives and pipes=>loader
 
 
 high level encapsulation everything in a module is package together and you only expose what's nesseccary to external modules 
